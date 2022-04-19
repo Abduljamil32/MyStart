@@ -7,70 +7,37 @@
 
 import SwiftUI
 
-
-
-struct ContentView: View {
+struct ContentView: View, BindingScreen {
    
-    @State var showingAlert: Bool = false
+    @State var showScreen = false
+    @State var data = "No data"
     
-    @State var isSheet: Bool = false
-    
-    var actionSheet: ActionSheet{
-        let title = "IOS"
-        let message = "Here we go"
-        
-        return ActionSheet(title: Text(title), message: Text(message),
-                           buttons: [
-                            .default(Text("YES"), action: {
-                                
-                            }),
-                            .destructive(Text("NO"), action: {
-                                
-                            })
-                           ])
+
+    func onRecieved(value: String){
+        print(value)
+        data = value
     }
     
     var body: some View {
        
-        TabView{
-//            MARK: -- Alert Tab
-            Button(action: {
-                self.showingAlert = true
-            }, label: {
-                Text("Alert Dialog")
-                    .font(.title)
+        NavigationView{
+            
+            VStack{
+                Text("\(data)").padding()
                 
-            }).alert(isPresented: $showingAlert, content: {
-                let title = "IOS"
-                let message = "Here we go"
-                return Alert(title: Text(title), message: Text(message), primaryButton: .destructive(Text("NO")){
-                        print("1")
-                }, secondaryButton: .default(Text("YES")){
-                    print("2")
-                })
-            })
-//            MARK: -- Action Sheet Tab
-            .tabItem{
-                Image(systemName: "circle")
-                Text("Alert")
+                Button(action: ({
+                    showScreen.toggle()
+                }), label: {
+                    Text("Present")
+                }).sheet(isPresented: $showScreen, content: {
+                    PresentScreen(data: "PDP", delegate: self)
+                }).padding()
+                    .navigationBarTitle("Home", displayMode: .inline)
+                    .navigationBarItems(
+                        leading: Image(systemName: "trash.fill"),
+                        trailing: Image(systemName: "camera.fill"))
             }
-            Button(action: {
-                self.isSheet = true
-                    
-            }, label: {
-                Text("Action Sheet")
-                    .font(.title)
-            }).actionSheet(isPresented: $isSheet, content: {
-                self.actionSheet
-            })
-            .tabItem{
-                Image(systemName: "circle")
-                Text("Sheet")
-            }
-            
         }
-            
-            
     }
 }
 
