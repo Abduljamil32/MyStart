@@ -7,37 +7,22 @@
 
 import SwiftUI
 
-struct ContentView: View, BindingScreen {
-   
-    @State var showScreen = false
-    @State var data = "No data"
+struct ContentView: View {
     
-
-    func onRecieved(value: String){
-        print(value)
-        data = value
-    }
+    @State private var half = false
+    @State private var dim = false
     
     var body: some View {
-       
-        NavigationView{
-            
-            VStack{
-                Text("\(data)").padding()
+        
+        Image("eifel_tower").resizable()
+            .scaleEffect(half ? 0.5 : 1.0)
+            .opacity(dim ? 0.2 : 1.0)
+            .animation(.easeInOut(duration: 1.0))
+            .onTapGesture {
+                self.dim.toggle()
+                self.half.toggle()
                 
-                Button(action: ({
-                    showScreen.toggle()
-                }), label: {
-                    Text("Present")
-                }).sheet(isPresented: $showScreen, content: {
-                    PresentScreen(data: "PDP", delegate: self)
-                }).padding()
-                    .navigationBarTitle("Home", displayMode: .inline)
-                    .navigationBarItems(
-                        leading: Image(systemName: "trash.fill"),
-                        trailing: Image(systemName: "camera.fill"))
             }
-        }
     }
 }
 
