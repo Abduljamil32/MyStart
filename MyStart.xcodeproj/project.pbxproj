@@ -15,8 +15,8 @@
 		1151122E28102E640099118D /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1151122D28102E640099118D /* LottieView.swift */; };
 		1151123028102F920099118D /* facebook_login.json in Resources */ = {isa = PBXBuildFile; fileRef = 1151122F28102F920099118D /* facebook_login.json */; };
 		11511232281030410099118D /* facebook_like.json in Resources */ = {isa = PBXBuildFile; fileRef = 11511231281030410099118D /* facebook_like.json */; };
-		115EEAAA280BEC580053E7BA /* PresentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115EEAA9280BEC580053E7BA /* PresentScreen.swift */; };
-		115EEAAC280BF19A0053E7BA /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115EEAAB280BF19A0053E7BA /* Protocol.swift */; };
+		1151127628116BBC0099118D /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1151127528116BBC0099118D /* SignInScreen.swift */; };
+		1151127828116BD50099118D /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1151127728116BD50099118D /* SignUpScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +28,8 @@
 		1151122D28102E640099118D /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		1151122F28102F920099118D /* facebook_login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = facebook_login.json; sourceTree = "<group>"; };
 		11511231281030410099118D /* facebook_like.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = facebook_like.json; sourceTree = "<group>"; };
-		115EEAA9280BEC580053E7BA /* PresentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentScreen.swift; sourceTree = "<group>"; };
-		115EEAAB280BF19A0053E7BA /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		1151127528116BBC0099118D /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
+		1151127728116BD50099118D /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +63,10 @@
 		11486E3428058C4B001C89BE /* MyStart */ = {
 			isa = PBXGroup;
 			children = (
+				1151127428116B990099118D /* screens */,
 				1151122A28102D7E0099118D /* JsonFiles */,
 				11486E3528058C4B001C89BE /* MyStartApp.swift */,
 				11486E3728058C4B001C89BE /* ContentView.swift */,
-				115EEAA9280BEC580053E7BA /* PresentScreen.swift */,
-				115EEAAB280BF19A0053E7BA /* Protocol.swift */,
 				11486E3928058C4D001C89BE /* Assets.xcassets */,
 				11486E3B28058C4D001C89BE /* Preview Content */,
 			);
@@ -90,6 +89,15 @@
 				1151122D28102E640099118D /* LottieView.swift */,
 			);
 			path = JsonFiles;
+			sourceTree = "<group>";
+		};
+		1151127428116B990099118D /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				1151127528116BBC0099118D /* SignInScreen.swift */,
+				1151127728116BD50099118D /* SignUpScreen.swift */,
+			);
+			path = screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,11 +178,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				115EEAAA280BEC580053E7BA /* PresentScreen.swift in Sources */,
+				1151127828116BD50099118D /* SignUpScreen.swift in Sources */,
 				11486E3828058C4B001C89BE /* ContentView.swift in Sources */,
+				1151127628116BBC0099118D /* SignInScreen.swift in Sources */,
 				1151122E28102E640099118D /* LottieView.swift in Sources */,
 				11486E3628058C4B001C89BE /* MyStartApp.swift in Sources */,
-				115EEAAC280BF19A0053E7BA /* Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
