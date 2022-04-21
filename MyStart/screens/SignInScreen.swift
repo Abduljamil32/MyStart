@@ -47,22 +47,18 @@ struct SignInScreen: View {
                 Spacer()
                 HStack{
                     Text("Don't have an account?").foregroundColor(.blue)
-                    //                    NavigationLink(destination: SignUpScreen()){
-                    Button("Sign Up"){
-                        isSignedIn = true
-                    }.sheet(isPresented: $isSignedIn, content: {
-                        SignUpScreen()
-                    })
-                    .font(.system(size: 19))
-                    
-                    
+                    NavigationLink(destination: SignUpScreen()){
+                        Text("Sign Up").foregroundColor(.blue)
+                        .font(.system(size: 19))
+                    }
                     
                 }
             }.padding()
-            //        }.navigationBarTitle("Instagram", displayMode: .inline)
+                .navigationBarTitle("Instagram", displayMode: .inline)
         }
     }
 }
+
 
 struct SignInScreens_Previews: PreviewProvider {
     static var previews: some View {
