@@ -8,10 +8,7 @@
 import SwiftUI
 
 struct SignUpScreen: View {
-    
     @Environment(\.presentationMode) var presentation
-   
-    
     @State var firstname: String = ""
     @State var secondname: String = ""
     @State var email: String = ""
@@ -61,9 +58,8 @@ struct SignUpScreen: View {
                     presentation.wrappedValue.dismiss()
                 }
                 .font(.system(size: 19))
-                
             }
-                
+            
             
         }.padding()
     }

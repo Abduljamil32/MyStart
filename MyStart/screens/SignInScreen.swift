@@ -15,7 +15,7 @@ struct SignInScreen: View {
     @State var userPw: String = ""
     
     var body: some View {
-//        NavigationView{
+        NavigationView{
             VStack{
                 Spacer()
                 Image("im_user")
@@ -47,6 +47,7 @@ struct SignInScreen: View {
                 Spacer()
                 HStack{
                     Text("Don't have an account?").foregroundColor(.blue)
+                    //                    NavigationLink(destination: SignUpScreen()){
                     Button("Sign Up"){
                         isSignedIn = true
                     }.sheet(isPresented: $isSignedIn, content: {
@@ -54,9 +55,12 @@ struct SignInScreen: View {
                     })
                     .font(.system(size: 19))
                     
+                    
+                    
                 }
             }.padding()
-//        }.navigationBarTitle("Instagram", displayMode: .inline)
+            //        }.navigationBarTitle("Instagram", displayMode: .inline)
+        }
     }
 }
 
