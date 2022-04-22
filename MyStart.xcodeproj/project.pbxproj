@@ -17,6 +17,8 @@
 		11511232281030410099118D /* facebook_like.json in Resources */ = {isa = PBXBuildFile; fileRef = 11511231281030410099118D /* facebook_like.json */; };
 		1151127628116BBC0099118D /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1151127528116BBC0099118D /* SignInScreen.swift */; };
 		1151127828116BD50099118D /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1151127728116BD50099118D /* SignUpScreen.swift */; };
+		1151127A2812BDC70099118D /* StarterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115112792812BDC60099118D /* StarterScreen.swift */; };
+		1151127C2812BE130099118D /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1151127B2812BE130099118D /* HomeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		11511231281030410099118D /* facebook_like.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = facebook_like.json; sourceTree = "<group>"; };
 		1151127528116BBC0099118D /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
 		1151127728116BD50099118D /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		115112792812BDC60099118D /* StarterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterScreen.swift; sourceTree = "<group>"; };
+		1151127B2812BE130099118D /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				1151127528116BBC0099118D /* SignInScreen.swift */,
 				1151127728116BD50099118D /* SignUpScreen.swift */,
+				115112792812BDC60099118D /* StarterScreen.swift */,
+				1151127B2812BE130099118D /* HomeScreen.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -179,6 +185,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1151127828116BD50099118D /* SignUpScreen.swift in Sources */,
+				1151127A2812BDC70099118D /* StarterScreen.swift in Sources */,
+				1151127C2812BE130099118D /* HomeScreen.swift in Sources */,
 				11486E3828058C4B001C89BE /* ContentView.swift in Sources */,
 				1151127628116BBC0099118D /* SignInScreen.swift in Sources */,
 				1151122E28102E640099118D /* LottieView.swift in Sources */,

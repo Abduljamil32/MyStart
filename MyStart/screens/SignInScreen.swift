@@ -33,7 +33,8 @@ struct SignInScreen: View {
                     .cornerRadius(100)
                 
                 Button(action: {
-                    
+                    UserDefaults.standard.set(true, forKey: "status")
+                    NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
                 }, label: {
                     HStack{
                         Spacer()
